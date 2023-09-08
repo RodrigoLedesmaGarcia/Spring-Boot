@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENVIAR LOS PARAMETROS</title>
+    <style>
+     *{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+     }
+
+     .w {
+        width: 100%;
+        height: 100vh;
+        background: url(/Images/bruja.jpg);
+        background-size: cover;
+        background-position: center;
+
+      }
+      
+      h1{
+		  color: rgb(228, 237, 71);
+	  }
+	
+
+    </style>
+</head>
+<body>
+	<div class="w">
+	
+	 <h1>Enviar los parametros</h1>
+ <ul>
+	 <br>	 
+	<li><a th:href="@{/parametros/string(texto='hola mundo')}">/parametros/string?texto=Hola Mundo</a></li>
+	 <br>	
+	<li><a th:href="@{/parametros/string(texto='un bel morir')}">/parametros/string?texto=un bel morir</a></li>
+	 <br>
+	<li><a th:href="@{/parametros/mix-parametros(saludo='Hola mundo', numero= 10)}">/parametros/mix-parametros(saludo='Hola mundo', numero= 10</a><li>
+	 <br>
+	<li><a th: href="@{/mix-parametros-request(saludo='Hola java', numero= 11)}">mix-parametros-request(saludo='Hola mundo', numero= 10)</a></li>  
+	 <br>
+</ul>
+	 
+   </div> 
+</body>
+
+</html>
